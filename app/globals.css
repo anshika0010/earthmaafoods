@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+:root{
+    --font-family-h1:"Outfit", sans-serif;
+    --font-family-h2:"Outfit", sans-serif;
+    --font-family-h3:"Outfit", sans-serif;
+    --font-family-h4:"Outfit", sans-serif;
+    --font-family-h5:"Outfit", sans-serif;
+    --font-family-h6:"Outfit", sans-serif;
+    --font-family-a:"Outfit", sans-serif;
+    --font-family-P:"Outfit", sans-serif;
+    --button-bg-color:#51241F;
+}
+h1{
+    font-family: var(--font-family-h1);
+
+}
+
+h3{
+    font-family: var(--font-family-h3);
+    font-weight: bold;
+}
+
+h2{
+    font-family: var(--font-family-h2);
+}
+
+h4{
+    font-family: var(--font-family-h4);
+}
+h5{
+    font-family: var(--font-family-h5);
+}
+p{
+     font-family: var(--font-family-P);
+}
+
+/* Testimonial Marquee */
+.testimonial-section {
+  padding: 60px 0;
+  background: #faf8f4;
+  overflow: hidden;
+}
+.testimonial-section .t-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+  font-family: Georgia, serif;
+}
+.testimonial-section .t-heading span { color: #4a7c59; }
+.testimonial-section .t-subtext {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin: 0 0 40px;
+}
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.horizontal-marquee {
+  display: flex;
+  width: max-content;
+  animation: scrollleft 28s linear infinite;
+}
+.horizontal-marquee:hover {
+  animation-play-state: paused;
+}
+@keyframes scrollleft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-item {
+  flex-shrink: 0;
+  padding: 12px 14px;
+}
+.testimonial-card {
+  width: 280px;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  box-sizing: border-box;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.13);
+}
+.card-green  { background: #e8f5ec; }
+.card-yellow { background: #fef9e7; }
+.card-peach  { background: #fdecea; }
+.card-blue   { background: #e8f0fe; }
+.t-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.t-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.t-stars    { color: #f5a623; font-size: 14px; letter-spacing: 1px; }
+.t-name     { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin: 0 0 2px; }
+.t-loc      { font-size: 0.78rem; color: #888; margin: 0; }
+.t-review   { font-size: 0.88rem; color: #444; line-height: 1.6; margin-top: 12px; font-style: italic; }

@@ -1,0 +1,97 @@
+.blog-page .hero {
+  background: url(/images/earthmaafoods-blog-banner.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+ 
+  aspect-ratio: 16/6;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+
+/* CATEGORY BUTTONS */
+.blog-page .blogcategories {
+  text-align: center;
+  padding: 25px;
+}
+
+.blog-page .blogcategories button {
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 7px;
+  border: 1px solid #b9b9b9;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.blog-page .blogcategories button.active,
+.blog-page .blogcategories button:hover {
+  background: black;
+  color: white;
+}
+
+/* BLOG GRID */
+.blog-page .blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.blog-page .blog-card {
+    max-width: 350px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.blog-page .blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-page .blog-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 150px;
+
+  background-image:  url(../../assets/images/noimage.webp);
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+}
+
+.blog-page .blog-content {
+  padding: 15px 18px;
+}
+
+.blog-page .meta {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.blog-page .blog-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-page .read-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: green;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
